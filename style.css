@@ -211,7 +211,6 @@ p {
 
 @media (max-width: 600px) {
   body {
-    overflow-x: hidden;
     font-size: 16px;
   }
 
@@ -221,12 +220,6 @@ p {
 
   #contador-dias {
     font-size: 1em;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
   }
 
   nav a {
