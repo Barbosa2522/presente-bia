@@ -1,0 +1,280 @@
+@media (max-width: 600px) {
+  .slideshow-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .slide {
+    object-fit: cover;
+  }
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsar {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #fff0f5;
+  color: #333;
+}
+
+header {
+  background-color: #ffb6c1;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+  color: #fff;
+  margin: 0;
+}
+
+nav {
+  background-color: #ffe4e1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d6336c;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-family: "Dancing Script", cursive;
+  color: #ff69b4;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9; /* força proporção widescreen */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* corta e preenche mantendo proporção */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#contador-dias {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.carousel-container {
+  position: relative;
+  text-align: center;
+}
+
+.carousel-text {
+  display: none;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #a41661;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-text.active {
+  display: block;
+}
+
+.carousel-controls {
+  margin-top: 15px;
+}
+
+.carousel-controls button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.mensagem-box {
+  text-align: center;
+  background-color: #fffafc;
+  border: 2px dashed #ff69b4;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.mensagem-box button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mensagem-box button:hover {
+  background-color: #ff69b4;
+}
+
+#texto-surpresa {
+  margin-top: 20px;
+  font-size: 1.3em;
+  color: #a41661;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+#texto-surpresa.aparecer {
+  opacity: 1;
+}
+
+#rodape {
+  background-color: #ffb6c1;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  color: #d6336c;
+}
+
+.heart {
+  animation: pulsar 1s infinite;
+}
+
+.cora {
+  position: fixed;
+  top: 0;
+  font-size: 24px;
+  animation: cair 3s linear forwards;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  #contador-dias {
+    font-size: 1em;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.5em;
+  }
+
+  .slideshow-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .slide {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .carousel-text {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+
+  .carousel-controls button {
+    padding: 8px 14px;
+    font-size: 1em;
+  }
+
+  .mensagem-box {
+    padding: 20px 15px;
+  }
+
+  .mensagem-box button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
